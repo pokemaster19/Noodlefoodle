@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noodlefoodle</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .fullscreen {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            background: url('video1.gif') no-repeat center center;
+            background-size: cover;
+            overflow: hidden;
+            color: white;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+
+        .fullscreen h1, .fullscreen p {
+            text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .fullscreen h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .fullscreen p {
+            font-size: 1.2rem;
+        }
+
+        .navbar {
+            position: absolute;
+            top: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: white;
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .navbar-brand i {
+            margin-right: 5px;
+            color: #ff6347;
+        }
+
+        .navbar-nav {
+            display: flex;
+            align-items: center;
+            margin-right: 80px;
+        }
+
+        .nav-link {
+            margin: 0 10px;
+            color: white;
+            transition: color 0.3s;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+
+        .nav-link:hover {
+            color: gray;
+        }
+
+        .btn-basket {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .btn-basket:hover {
+            color: gray;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+            font-weight: 600;
+        }
+
+        .row-benefits {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .benefit-item {
+            flex: 1 1 300px;
+            text-align: center;
+            margin: 10px;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .benefit-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .fullscreen h1 {
+                font-size: 2rem;
+            }
+
+            .fullscreen p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .fullscreen h1 {
+                font-size: 1.5rem;
+            }
+
+            .fullscreen p {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="fullscreen">
+        <div class="navbar">
+            <a class="navbar-brand" href="#"><i class="fas fa-hamburger"></i>Noodlefoodle</a>
+            <div class="navbar-nav">
+                <a class="nav-link" href="#">Главная</a>
+                <a class="nav-link" href="#">Доставка</a>
+                <a class="nav-link" href="#">Меню</a>
+                <a class="nav-link" href="#">Контакты</a>
+                <button class="btn-basket">
+                    <i class="fas fa-shopping-basket"></i>
+                </button>
+            </div>
+        </div>
+        <p>Мы открыты для вас<br>Кировоградская ул., 13А, Москва<br>Ежедневно, вс-пн 11:00 - 00:00</p>
+        <h1>ЖДЕМ ВАС В NF</h1>
+    </div>
+
+    <div class="container">
+        <h2 class="mt-5">Почему выбирают Noodlefoodle</h2>
+        <p>В Noodlefoodle мы стремимся предоставить нашим клиентам лучший опыт употребления рамена. Наши шеф-повара используют только самые свежие ингредиенты и традиционные методы приготовления, чтобы каждая чаша рамена была настоящим наслаждением для ваших вкусовых рецепторов. Будь вы любителем рамена или пробуете его впервые, присоединяйтесь к нам за вкусным и удовлетворяющим обедом.</p>
+
+        <div class="row-benefits">
+            <div class="benefit-item">
+                <img src="ramen1.jpg" class="img-fluid mb-3" alt="Фирменный Рамен">
+                <h3>Фирменный Рамен</h3>
+                <p>Насладитесь богатым вкусом нашего фирменного рамена, приготовленного с домашней лапшой и медленно приготовленным бульоном.</p>
+            </div>
+            <div class="benefit-item">
+                <img src="atmsph.jpg" class="img-fluid mb-3" alt="Уютная Атмосфера">
+                <h3>Уютная Атмосфера</h3>
+                <p>Наслаждайтесь едой в нашем уютном, современном интерьере. Идеально для расслабления и наслаждения вкусной едой.</p>
+            </div>
+            <div class="benefit-item">
+                <img src="mesto.jpg" class="img-fluid mb-3" alt="Удобное Расположение">
+                <h3>Удобное Расположение</h3>
+                <p>Расположенный в центре города, наш ресторан легко найти и до него удобно добираться. Будь то шопинг, работа или прогулка, загляните к нам перекусить.</p>
+            </div>
+        </div>
+
+        <div class="row-benefits">
+            <div class="benefit-item">
+                <img src="ramen4.jpg" class="img-fluid mb-3" alt="Тонкоцу Рамен">
+                <h3>Тонкоцу Рамен</h3>
+                <p>Насыщенный бульон из свиной кости, с добавлением нежного свиного чашу, маринованных яиц и зеленого лука.</p>
+            </div>
+            <div class="benefit-item">
+                <img src="ramen5.jpg" class="img-fluid mb-3" alt="Мисо Рамен">
+                <h3>Мисо Рамен</h3>
+                <p>Пикантный бульон из пасты мисо, с добавлением нежного свиного чашу, маринованных яиц и зеленого лука.</p>
+            </div>
+            <div class="benefit-item">
+                <img src="ramen6.jpg" class="img-fluid mb-3" alt="Сёю Рамен">
+                <h3>Сёю Рамен</h3>
+                <p>Легкий соевый бульон, с добавлением нежного свиного чашу, маринованных яиц и зеленого лука.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
